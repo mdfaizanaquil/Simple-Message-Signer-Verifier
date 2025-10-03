@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Signer & Verifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Message Signer & Verifier</h1>
+        <button id="connectBtn">Connect Wallet</button>
+
+        <div id="signer" class="hidden">
+            <h2>Sign a Message</h2>
+            <textarea id="messageToSign" placeholder="Enter any message to sign..."></textarea>
+            <button id="signBtn">Sign Message</button>
+            <p><strong>Your Signature:</strong></p>
+            <p id="signatureOutput"></p>
+        </div>
+
+        <div id="verifier">
+            <h2>Verify a Signature</h2>
+            <textarea id="messageToVerify" placeholder="Original Message"></textarea>
+            <textarea id="signatureToVerify" placeholder="Signature"></textarea>
+            <input type="text" id="addressToVerify" placeholder="Signer's Address">
+            <button id="verifyBtn">Verify</button>
+            <p id="verificationResult"></p>
+        </div>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
